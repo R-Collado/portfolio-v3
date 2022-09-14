@@ -1,0 +1,23 @@
+<div class="nav-menu" (click)="toggleMenu($event)">
+    <div class="nav-menu-icon">
+        <div class="nav-menu-icon--1"></div>
+        <div class="nav-menu-icon--2"></div>
+    </div>
+</div>
+
+<nav class="primary-nav">
+    <p class="nav-title">essentials</p>
+    <a *ngFor="let link of links" 
+        [routerLink]="link.link"
+        class="link">
+            {{ link.label }}
+        </a>
+    <div class="socials">
+        <p class="nav-title">say hello</p>
+        <div class="links">
+            <a *ngFor="let social of socials"
+                [href]="social.link"
+                class="link">{{ social.label }}</a>
+        </div>
+    </div>
+</nav>

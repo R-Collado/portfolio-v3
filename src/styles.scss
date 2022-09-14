@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    
+    --clr-primary-100: hsl(205, 39%, 90%);
+    --clr-primary-200: hsl(206, 33%, 65%);
+    --clr-primary-300: hsl(207, 65%, 57%);
+    --clr-primary-400: hsl(206, 46%, 47%); 
+    
+    --clr-accent-400: hsl(14, 77%, 82%);
+
+    --clr-text: hsl(0, 0%, 6%);
+
+    --clr-background-100: hsl(210, 100%, 99%);
+    --clr-background-200: hsl(0, 0%, 98%);
+    --clr-background-300: hsl(206, 26%, 95%);
+} 
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 62.5%;
+}
