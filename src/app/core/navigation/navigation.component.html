@@ -7,17 +7,25 @@
 
 <nav class="primary-nav">
     <p class="nav-title">essentials</p>
-    <a *ngFor="let link of links" 
-        [routerLink]="link.link"
-        class="link">
-            {{ link.label }}
-        </a>
+    <ul class="link-list">
+        <li *ngFor="let link of links">
+            <a [routerLink]="link.link"
+            class="link">
+                {{ link.label }}
+            </a>
+        </li>
+    </ul>
     <div class="socials">
         <p class="nav-title">say hello</p>
         <div class="links">
-            <a *ngFor="let social of socials"
-                [href]="social.link"
-                class="link">{{ social.label }}</a>
+            <ul class="link-list socials">
+                <li *ngFor="let social of socials">
+                    <a [routerLink]="social.link"
+                    class="link">
+                        {{ social.label }}
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

@@ -65,15 +65,38 @@
   top: 0;
   right: 0;
   height: 100vh;
-  padding: 3rem;
+  padding-left: 5rem;
   opacity: 0;
-  z-index: -1;
+  z-index: 1;
   transition: opacity 0.25s ease;
+
   & .nav-title {
+    margin-top: 10rem;
     font-size: 4rem;
     font-weight: 400;
     margin-bottom: 0;
   }
+
+  & .link-list {
+    list-style: none;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    & > * + * {
+     margin-top: 2rem;
+    }
+
+    &.socials {
+      display: flex;
+      gap: 3rem;
+
+      & > * + * {
+        margin-top: 0;
+       }
+   
+    }
+  }
+
 
   & .link {
     color: var(--clr-primary-400);
@@ -101,6 +124,7 @@
 
         & .nav-title {
           font-size: 2rem;
+          margin-top: 5rem;
         }
 
         & .link {
