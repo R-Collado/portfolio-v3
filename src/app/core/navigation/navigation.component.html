@@ -6,15 +6,17 @@
 </div>
 
 <nav class="primary-nav">
-    <p class="nav-title">essentials</p>
-    <ul class="link-list">
-        <li *ngFor="let link of links">
-            <a [routerLink]="link.link"
-            class="link">
-                {{ link.label }}
-            </a>
-        </li>
-    </ul>
+    <div class="essentials">
+        <p class="nav-title">essentials</p>
+        <ul class="link-list">
+            <li *ngFor="let link of links">
+                <a [routerLink]="link.link"
+                class="link">
+                    {{ link.label }}
+                </a>
+            </li>
+        </ul>
+    </div>
     <div class="socials">
         <p class="nav-title">say hello</p>
         <div class="links">

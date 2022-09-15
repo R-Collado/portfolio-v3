@@ -27,9 +27,17 @@ export class NavigationComponent implements OnInit {
   }
 
 toggleMenu(toggler: any) {
-  console.log()
-  const menuBtn = toggler.srcElement;
-  const menu = toggler.srcElement.parentElement.nextSibling;
+  let menuBtn;
+  let menu;
+
+  if(toggler.srcElement.classList.contains('nav-menu-icon')) {
+    menuBtn = toggler.srcElement;
+    menu = toggler.srcElement.parentElement.nextSibling;
+  } else {
+    menuBtn = toggler.srcElement.firstElementChild;
+    menu = toggler.srcElement.nextSibling;
+  }
+  
   menuBtn.classList.toggle('active');
   menu.classList.toggle('active');
 

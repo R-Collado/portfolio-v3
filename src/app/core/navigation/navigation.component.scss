@@ -104,11 +104,31 @@
     font-size: 3rem;
     font-weight: 300;
     margin-left: 1rem;
+    position: relative;
+  
+    &:hover::before {
+      content: '';
+      position: absolute;
+      right: -.5rem;
+      background-color: var(--clr-primary-100);
+      height: 100%;
+      width: 2rem;
+      z-index: -1;
+    }
   }
 
   &.active {
     opacity: 1;
     z-index: 500;
+
+    & .essentials {
+      animation: fadeUp .25s linear;
+    }
+    
+    & .socials {
+      animation: fadeUp2 .5s linear;
+    } 
+
   }
 }
 
@@ -131,4 +151,34 @@
           font-size: 2rem;
         }
     }
+}
+
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp2 {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
