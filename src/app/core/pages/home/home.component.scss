@@ -1,3 +1,5 @@
+// header
+
 .primary-header {
   margin: 0;
   background: var(--clr-primary-100);
@@ -65,4 +67,52 @@
         z-index: -1;
     }
   }
+}
+
+// who am i
+
+.whoami {
+    padding: 5rem 2.5rem;
+    text-align: center;
+
+    & .section-title {
+        font-size: 5rem;
+        font-weight: 900;
+    }
+
+    & .description {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        
+        & + .description  {
+            margin-top: 1rem;
+        }
+    }
+
+    & .socials {
+        margin-top: 5rem;
+        padding-top: 3rem;
+        border-top: 2px solid var(--clr-primary-400);
+
+        & p {
+            color: var(--clr-primary-400);
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        & .social-icons {
+            margin-block: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 3.5rem;
+
+            & .social-icon {
+                border: none;
+                background-color: var(--clr-background-100);
+                font-size: 2rem;
+                font-weight: 900;
+            }
+        }
+    }
 }
