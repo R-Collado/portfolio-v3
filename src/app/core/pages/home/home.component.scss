@@ -35,13 +35,14 @@
     }
 
     & .name {
+      position: relative;
+      top: 15rem;
+      margin-left: auto;
       font-size: 10rem;
-      font-weight: 900;
+      font-weight: 800;
       line-height: 1;
-      margin-top: 20rem;
-      margin-left: 13rem;
-      margin-bottom: 6rem;
-      transform: rotate(-90deg);
+      max-width: 5ch;
+      transform: rotate(-90deg) translateY(5rem);
     }
   }
 
@@ -50,7 +51,7 @@
     position: relative;
     width: max-content;
     z-index: 0;
-
+    margin-top: 30rem;
     & img {
         z-index: 2;
     }
