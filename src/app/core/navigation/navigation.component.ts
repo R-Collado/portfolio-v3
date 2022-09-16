@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
   
   links = [
     {link: '/', label: 'home'},
@@ -20,27 +20,22 @@ export class NavigationComponent implements OnInit {
     {link: '/', label: 'in'},
     {link: '/', label: 'gh'},
   ]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-toggleMenu(toggler: any) {
-  let menuBtn;
-  let menu;
-
-  if(toggler.srcElement.classList.contains('nav-menu-icon')) {
-    menuBtn = toggler.srcElement;
-    menu = toggler.srcElement.parentElement.nextSibling;
-  } else {
-    menuBtn = toggler.srcElement.firstElementChild;
-    menu = toggler.srcElement.nextSibling;
-  }
   
-  menuBtn.classList.toggle('active');
-  menu.classList.toggle('active');
+  toggleMenu(toggler: any) {
+    let menuBtn;
+    let menu;
 
-}
+    if(toggler.srcElement.classList.contains('nav-menu-icon')) {
+      menuBtn = toggler.srcElement;
+      menu = toggler.srcElement.parentElement.nextSibling;
+    } else {
+      menuBtn = toggler.srcElement.firstElementChild;
+      menu = toggler.srcElement.nextSibling;
+    }
+    
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+
+  }
 
 }
