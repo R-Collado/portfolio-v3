@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
+import { PagesModule } from './pages/pages.module';
 
 
 
@@ -11,7 +12,8 @@ import { NavigationComponent } from './navigation/navigation.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    PagesModule
   ],
   exports: [
     NavigationComponent

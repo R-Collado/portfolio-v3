@@ -1,14 +1,21 @@
 <header class="primary-header">
-  <div class="text">
-    <div class="job-title">
-      <div class="jobs">
-        <p>fullstack developer</p>
-        <p>website designer</p>
+  <div class="container">
+    <div class="text">
+      <div class="job-title">
+        <div class="jobs">
+          <p>fullstack developer</p>
+          <p>website designer</p>
+        </div>
       </div>
+      <h1 class="name">roger collado</h1>
     </div>
-    <h1 class="name">roger collado</h1>
+    <div class="img">
+      <img *ngIf="smallHeader; else bigImg" src="assets/img/header-img-small.png" />
+      <ng-template #bigImg>
+        <img  src="assets/img/header-img-big.png" />
+      </ng-template>
+    </div>
   </div>
-  <div class="img"><img src="assets/img/header-img-small.png" /></div>
 </header>
 
 <section class="whoami">

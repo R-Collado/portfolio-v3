@@ -6,59 +6,58 @@
   padding-top: 1px;
   padding-bottom: 10rem;
 
-  & .text {
-    
-    & .job-title {
-      color: var(--clr-primary-200);
-      position: relative;
-      margin-left: auto;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      margin-top: 10rem;
-      margin-right: 1rem;
-      gap: 1rem;
+  .container {
+    & .text {
+      & .job-title {
+        color: var(--clr-primary-200);
+        position: relative;
+        margin-left: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 10rem;
+        margin-right: 1rem;
+        gap: 1rem;
 
-      & p {
-        font-size: 2rem;
-        font-weight: 400;
+        & p {
+          font-size: 2rem;
+          font-weight: 400;
+        }
+
+        &::before {
+          content: "";
+          position: relative;
+          height: 2px;
+          width: 15rem;
+          background: var(--clr-primary-200);
+          transform: translateY(-5px);
+        }
+      }
+
+      & .name {
+        position: relative;
+        top: 15rem;
+        margin-left: auto;
+        font-size: 10rem;
+        font-weight: 800;
+        line-height: 1;
+        max-width: 5ch;
+        transform: rotate(-90deg) translateY(5rem);
+      }
+    }
+
+    & .img {
+      margin-inline: auto;
+      position: relative;
+      width: max-content;
+      z-index: 0;
+      margin-top: 25rem;
+      & img {
+        z-index: 2;
       }
 
       &::before {
         content: "";
-        position: relative;
-        height: 2px;
-        width: 15rem;
-        background: var(--clr-primary-200);
-        transform: translateY(-5px);
-      }
-    }
-
-    & .name {
-      position: relative;
-      top: 15rem;
-      margin-left: auto;
-      font-size: 10rem;
-      font-weight: 800;
-      line-height: 1;
-      max-width: 5ch;
-      transform: rotate(-90deg) translateY(5rem);
-    }
-  }
-
-  & .img {
-    margin-inline: auto;
-    position: relative;
-    width: max-content;
-    z-index: 0;
-    margin-top: 30rem;
-    & img {
-        z-index: 2;
-    }
-
-
-    &::before {
-        content: '';
         position: absolute;
         top: 2.5rem;
         left: 2.5rem;
@@ -66,54 +65,88 @@
         height: 100%;
         border: 5px solid var(--clr-accent-400);
         z-index: -1;
+      }
     }
+  }
+}
+
+@media (min-width: 650px) {
+  .primary-header .container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    & .img {
+      margin-left: 5rem;
+      transform: translateY(-4rem);
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .primary-header .container {
+    max-width: 140rem;
+    justify-content: space-between;
+      align-items: stretch;
+
+      & .text {
+        margin-top: 10rem;
+
+        & .name {
+          margin-top: 24rem;
+        }
+      }
+
+      & .img::before {
+        top: 5rem;
+        left: 5rem;
+      }
   }
 }
 
 // who am i
 
 .whoami {
-    padding: 5rem 2.5rem;
-    text-align: center;
+  padding: 5rem 2.5rem;
+  text-align: center;
 
-    & .section-title {
-        font-size: 5rem;
+  & .section-title {
+    font-size: 5rem;
+    font-weight: 900;
+  }
+
+  & .description {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
+
+    & + .description {
+      margin-top: 2rem;
+    }
+  }
+
+  & .socials {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--clr-primary-400);
+
+    & p {
+      color: var(--clr-primary-400);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    & .social-icons {
+      margin-block: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 3.5rem;
+
+      & .social-icon {
+        border: none;
+        background-color: var(--clr-background-100);
+        font-size: 2rem;
         font-weight: 900;
+      }
     }
-
-    & .description {
-        font-size: 1.5rem;
-        font-weight: 500;
-        margin-top: 2rem;
-        
-        & + .description  {
-            margin-top: 2rem;
-        }
-    }
-
-    & .socials {
-        margin-top: 5rem;
-        padding-top: 3rem;
-        border-top: 2px solid var(--clr-primary-400);
-
-        & p {
-            color: var(--clr-primary-400);
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-
-        & .social-icons {
-            margin-block: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 3.5rem;
-
-            & .social-icon {
-                border: none;
-                background-color: var(--clr-background-100);
-                font-size: 2rem;
-                font-weight: 900;
-            }
-        }
-    }
+  }
 }
