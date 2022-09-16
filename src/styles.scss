@@ -1,34 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-    
-    --clr-primary-100: hsl(205, 39%, 90%);
-    --clr-primary-200: hsl(206, 33%, 65%);
-    --clr-primary-300: hsl(207, 65%, 57%);
-    --clr-primary-400: hsl(206, 46%, 47%); 
-    
-    --clr-accent-400: hsl(14, 77%, 82%);
+  --clr-primary-100: hsl(205, 39%, 90%);
+  --clr-primary-200: hsl(206, 33%, 65%);
+  --clr-primary-300: hsl(207, 65%, 57%);
+  --clr-primary-400: hsl(206, 46%, 47%);
 
-    --clr-text: hsl(0, 0%, 6%);
+  --clr-accent-400: hsl(14, 77%, 82%);
 
-    --clr-background-100: hsl(210, 100%, 99%);
-    --clr-background-200: hsl(0, 0%, 98%);
-    --clr-background-300: hsl(206, 26%, 95%);
-} 
+  --clr-text: hsl(0, 0%, 6%);
+
+  --clr-background-100: hsl(210, 100%, 99%);
+  --clr-background-200: hsl(0, 0%, 98%);
+  --clr-background-300: hsl(206, 26%, 95%);
+}
 
 html {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 62.5%;
-    background: var(--clr-backsground-300);
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  background: var(--clr-backsground-300);
+  margin: 0;
+  padding: 0;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-    max-width: 100rem;
-    margin: 0 auto;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 5rem;
+  font-weight: 900;
 }

@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ArrowdComponent } from './svg/arrowd/arrowd.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ArrowdComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports: [
+    ArrowdComponent
   ]
 })
 export class SharedModule { }
