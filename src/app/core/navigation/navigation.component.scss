@@ -51,13 +51,12 @@
     & .nav-menu-icon--2 {
       transform: rotateZ(-45deg) translateY(-3px);
       width: 4rem;
-    }
+    }    
+  }
 
-    &:hover .nav-menu-icon--1 {
-      margin: 0;
-  }
-    
-  }
+  &:hover .nav-menu-icon.active .nav-menu-icon--1 {
+    margin: 0;
+}
 }
 
 .primary-nav {
