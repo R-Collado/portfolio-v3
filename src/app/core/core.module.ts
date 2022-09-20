@@ -18,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     PagesModule
   ],
   exports: [
-    NavigationComponent
+    NavigationComponent,
+    FooterComponent
   ]
 })
 export class CoreModule { }
