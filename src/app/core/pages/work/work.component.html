@@ -1,3 +1,17 @@
-<div>
-    work
-</div>>
+<section class="work">
+  <div class="container">
+    <h3 class="page-title"><span>/</span>work</h3>
+    <p class="page-subtitle">a selection of projects i’ve worked on</p>
+    <div class="cards">
+      <div class="card" *ngFor="let card of cards" (click)="openLink(card.name)">
+        <div class="img">
+          <img [src]="card.img" alt="" />
+        </div>
+        <div class="text">
+          <p class="card-name">{{ card.name }}</p>
+          <a href="/" class="card-link">{{ card.link }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

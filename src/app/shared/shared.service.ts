@@ -18,6 +18,21 @@ export class SharedService {
       case 'gh': 
         window.open('https://github.com/R-Collado', '_blank');
         break;
+      case 'team': 
+        window.open('https://rcollado-team.netlify.app/', '_blank');
+        break;
+      case 'arise': 
+        window.open('https://rcollado-arise.netlify.app/', '_blank');
+        break;
+      case 'heyarts': 
+        window.open('https://rcollado-heyarts.netlify.app/', '_blank');
+        break;
+      case 'mense': 
+        window.open('https://rcollado-mense.netlify.app/', '_blank');
+        break;
+      case 'alcobe': 
+        window.open('https://rcollado-alcobe.netlify.app/', '_blank');
+        break;
       }
   }
 }
