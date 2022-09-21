@@ -11,7 +11,9 @@
         <ul class="link-list">
             <li *ngFor="let link of links">
                 <a [routerLink]="link.link"
-                class="link">
+                class="link"
+                (click)="linkClicked()"
+                *ngIf="link.link !==  path">
                     {{ link.label }}
                 </a>
             </li>
@@ -31,3 +33,5 @@
         </div>
     </div>
 </nav>
+
+<div class="overlay" (click)="closeMenu($event)"></div>

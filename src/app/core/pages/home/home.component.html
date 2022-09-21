@@ -10,9 +10,12 @@
       <h1 class="name">roger collado</h1>
     </div>
     <div class="img">
-      <img *ngIf="smallHeader; else bigImg" src="assets/img/header-img-small.png" />
+      <img
+        *ngIf="smallHeader; else bigImg"
+        src="assets/img/header-img-small.png"
+      />
       <ng-template #bigImg>
-        <img  src="assets/img/header-img-big.png" />
+        <img src="assets/img/header-img-big.png" />
       </ng-template>
     </div>
   </div>
@@ -26,13 +29,13 @@
         i'm a fullstack developer and website designer from Spain
       </p>
       <p class="description">
-        i'm probably not the typical designer who spends hours on ui designing apps,
-        but you'll find me immersed in stylesheets contemplating layouts and
-        changing every bit until it hits the spot
+        i'm probably not the typical designer who spends hours on ui designing
+        apps, but you'll find me immersed in stylesheets contemplating layouts
+        and changing every bit until it hits the spot
       </p>
       <p class="description">
-        ill deliver to you the best end product possible, on the fastest and most
-        efficient way. im here to transform your problems into solutions
+        ill deliver to you the best end product possible, on the fastest and
+        most efficient way. im here to transform your problems into solutions
       </p>
       <p class="description">
         i update this portfolio every year* as a recap to see how much i’ve
@@ -42,28 +45,31 @@
     <div class="socials">
       <p>if you desire to know more about me you can follow me on socials:</p>
       <div class="social-icons">
-          <button class="social-icon">ig</button>
-          <button class="social-icon">in</button>
-          <button class="social-icon">gh</button>
+        <button class="social-icon" (click)="openLink('ig')">ig</button>
+        <button class="social-icon" (click)="openLink('in')">in</button>
+        <button class="social-icon" (click)="openLink('gh')">gh</button>
       </div>
-      <p class="cta">or get in touch with me <svg-arrowd class="arrow"></svg-arrowd></p>
+      <p class="cta">
+        or get in touch with me <svg-arrowd class="arrow"></svg-arrowd>
+      </p>
     </div>
   </div>
-
 </section>
- 
+
 <section class="about">
   <div class="container">
     <div class="about-sections">
       <div class="about-section">
         <h2 class="section-title">i develop & design stuff</h2>
         <p class="subtitle">open code, whole apps and experimental projects</p>
-        <button>see my work</button>
+        <a>see my work</a>
       </div>
       <div class="about-section">
         <h2 class="section-title">i write about different topics</h2>
-        <p class="subtitle">mainly about coding but there is a bit of everything.</p>
-        <button>see my work</button>
+        <p class="subtitle">
+          mainly about coding but there is a bit of everything.
+        </p>
+        <a>read my articles</a>
       </div>
     </div>
   </div>
@@ -78,16 +84,17 @@
     <form>
       <div class="form-item form-name">
         <label>your name</label>
-        <input type="text" name="name" placeholder="example">
+        <input type="text" name="name" placeholder="example" required/>
       </div>
       <div class="form-item form-email">
         <label>email address</label>
-        <input type="email" name="email" placeholder="example@domain.com">
+        <input type="email" name="email" placeholder="example@domain.com" required/>
       </div>
       <div class="form-item form-message">
         <label>your message</label>
-        <textarea  name="message" placeholder="a piece of your mind"></textarea>
-        </div>
+        <textarea name="message" placeholder="a piece of your mind" required></textarea>
+      </div>
+      <div class="form-item"><button class="send-btn">send</button></div>
     </form>
   </div>
 </section>

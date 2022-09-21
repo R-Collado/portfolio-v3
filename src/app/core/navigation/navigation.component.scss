@@ -23,7 +23,7 @@
       height: 0.5rem;
       background: var(--clr-primary-300);
       transition: transform 0.25s ease, width 0.25s ease,
-        margin-right 0.25s ease;
+        margin-right 0.25s ease, background-color 0.25s ease;
     }
 
     &--1 {
@@ -33,8 +33,6 @@
     &--2 {
       width: 5rem;
     }
-
-    
   }
 
   &:hover .nav-menu-icon--1 {
@@ -51,16 +49,16 @@
     & .nav-menu-icon--2 {
       transform: rotateZ(-45deg) translateY(-3px);
       width: 4rem;
-    }    
+    }
   }
 
   &:hover .nav-menu-icon.active .nav-menu-icon--1 {
     margin: 0;
-}
+  }
 }
 
 .primary-nav {
-  background-color: var(--clr-background-100);
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -71,7 +69,7 @@
   padding-left: 5rem;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.25s ease, z-index .25s;
+  transition: opacity 0.25s ease, z-index 0.25s;
 
   & .nav-title {
     margin-top: 10rem;
@@ -85,21 +83,19 @@
     margin-top: 1rem;
     margin-left: 1rem;
 
-    & > * + * {
-     margin-top: 2rem;
+    & > * {
+      margin-top: 2rem;
     }
 
     &.hello {
       display: flex;
       gap: 3rem;
 
-      & > * + * {
+      & > * {
         margin-top: 0;
-       }
-   
+      }
     }
   }
-
 
   & .link {
     color: var(--clr-primary-400);
@@ -110,7 +106,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       right: 0;
       background-color: var(--clr-primary-100);
@@ -118,12 +114,12 @@
       width: 2rem;
       z-index: -1;
       opacity: 0;
-      transition: opacity .25s ease, right .25s ease-in-out;
+      transition: opacity 0.25s ease, right 0.25s ease-in-out;
     }
-  
+
     &:hover::before {
       opacity: 1;
-      right: -.5rem;
+      right: -0.5rem;
     }
   }
 
@@ -132,37 +128,34 @@
     z-index: 500;
 
     & .essentials {
-      animation: fadeUp .25s linear;
+      animation: fadeUp 0.25s linear;
     }
-    
-    & .socials {
-      animation: fadeUp2 .5s linear;
-    } 
 
+    & .socials {
+      animation: fadeUp2 0.5s linear;
+    }
   }
 }
 
-
 @media (min-width: 768px) {
-    .primary-nav {
-        left: auto;
-        top: 1.5rem;
-        right: 1.5rem;
-        background: var(--clr-background-100);
-        width: 32rem;
-        height: 45rem;
+  .primary-nav {
+    left: auto;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 32rem;
+    height: 45rem;
+    box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 
-        & .nav-title {
-          font-size: 2rem;
-          margin-top: 5rem;
-        }
-
-        & .link {
-          font-size: 2rem;
-        }
+    & .nav-title {
+      font-size: 2rem;
+      margin-top: 5rem;
     }
-}
 
+    & .link {
+      font-size: 2rem;
+    }
+  }
+}
 
 @keyframes fadeUp {
   0% {
@@ -190,5 +183,20 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  &.active {
+    z-index: 250;
+
   }
 }

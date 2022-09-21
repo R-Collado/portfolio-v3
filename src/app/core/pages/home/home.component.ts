@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   public smallHeader: boolean = false;
 
-  constructor() {}
+  constructor(private shared: SharedService) {}
 
   ngOnInit() {
     this.smallHeader = this.isSmallHeader();
@@ -25,5 +26,9 @@ export class HomeComponent implements OnInit {
     } else {
       return false;
     }
+  }
+
+  openLink(link: string): void {
+    this.shared.openLink(link);
   }
 }
