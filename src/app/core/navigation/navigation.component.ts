@@ -57,7 +57,15 @@ export class NavigationComponent implements OnInit{
     overlayElmnt.classList.toggle('active');
   }
 
-  linkClicked(): void {
+  linkClicked(link: any): void {
+    const menu = link.srcElement.parentElement.parentElement.parentElement.parentElement;
+    const menuBtn = menu.previousSibling.firstElementChild;
+    const overlay = menu.nextSibling;
+    
+    menu.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+    overlay.classList.toggle('active');
+
     setTimeout(() => {
       this.path = window.location.pathname;
     }, 1)

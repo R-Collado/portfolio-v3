@@ -12,7 +12,7 @@
             <li *ngFor="let link of links">
                 <a [routerLink]="link.link"
                 class="link"
-                (click)="linkClicked()"
+                (click)="linkClicked($event)"
                 *ngIf="link.link !==  path">
                     {{ link.label }}
                 </a>
