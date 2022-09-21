@@ -5,8 +5,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { PagesModule } from './pages/pages.module';
 import { FooterComponent } from './footer/footer.component';
 
-
-
 @NgModule({
   declarations: [
     NavigationComponent,

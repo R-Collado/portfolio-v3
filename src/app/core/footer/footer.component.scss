@@ -6,13 +6,13 @@
   & .footer-title {
     font-weight: 900;
     font-size: 3rem;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 
   & .messages {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;   
+    gap: 1.5rem;
 
     & p {
       font-size: 1.5rem;
@@ -31,7 +31,6 @@
     font-weight: 500;
     font-size: 1.5rem;
   }
-  
 
   & .bottom {
     display: flex;
@@ -42,36 +41,37 @@
     font-weight: 100;
     font-size: 1.25rem;
 
-    @media (min-width: 500px) { font-size: 2rem;}
+    @media (min-width: 500px) {
+      font-size: 2rem;
+    }
 
     & .socials {
-        display: flex;
-        gap: 2rem;
+      display: flex;
+      gap: 2rem;
 
-        & button {
-            border: none;
-            background: transparent;
-            font-weight: 100;
-            font-size: 2rem;
-            color: var(--clr-background-100);
-        }
+      & button {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        font-weight: 100;
+        font-size: 2rem;
+        color: var(--clr-background-100);
+      }
     }
   }
 }
 
 @media (min-width: 768px) {
-    .footer {
-      padding-left: 10rem;
-        & .top {
-            display: flex;
-            gap: 5rem;
-            align-items: baseline;
+  .footer {
+    padding-left: 10rem;
+    & .top {
+      display: flex;
+      gap: 5rem;
+      align-items: baseline;
 
-            & .link-list {
-                flex-direction: column;
-            }
-        }
-
-       
+      & .link-list {
+        flex-direction: column;
+      }
     }
+  }
 }
