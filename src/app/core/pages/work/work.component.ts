@@ -33,8 +33,7 @@ export class WorkComponent implements OnInit {
       'img': '/assets/img/alcobe-header.png',
       'name': 'alcobe',
       'link': 'rcollado-alcobe.netlify.app'
-    },
-    
+    },    
   ]
 
   constructor(private shared: SharedService) { }
