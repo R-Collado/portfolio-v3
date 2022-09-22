@@ -18,6 +18,9 @@ export class SharedService {
       case 'gh': 
         window.open('https://github.com/R-Collado', '_blank');
         break;
+      case 'tl':
+        window.open('https://t.me/r_collado', '_blank');
+        break;
       case 'team': 
         window.open('https://rcollado-team.netlify.app/', '_blank');
         break;
