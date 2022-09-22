@@ -1,1 +1,15 @@
-<p>shelf works!</p>
+<section class="shelf">
+  <div class="container">
+    <h3 class="page-title"><span>/ </span>shelf</h3>
+    <p class="page-subtitle">a selection of projects i have worked on</p>
+    <div class="articles">
+      <a  *ngFor="let article of articles" routerLink="{{article.link}}">
+        <div class="article">
+          <p class="article-title">{{ article.title }}</p>
+          <p class="article-date">{{ article.date }}</p>
+          <p class="article-preview">{{ article.preview }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

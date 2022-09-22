@@ -8,6 +8,7 @@ import { WorkComponent } from './work/work.component';
 import { ShelfComponent } from './shelf/shelf.component';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ArticleDetailComponent } from './shelf/article-detail/article-detail.component';
 
 
 
@@ -17,7 +18,8 @@ import { SkillsComponent } from './skills/skills.component';
     WorkComponent,
     ShelfComponent,
     ResumeComponent,
-    SkillsComponent
+    SkillsComponent,
+    ArticleDetailComponent
   ],
   imports: [
     CommonModule,
