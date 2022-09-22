@@ -7,7 +7,7 @@
 
 <nav class="primary-nav">
     <div class="essentials">
-        <p class="nav-title">essentials</p>
+        <p class="nav-title">Essentials</p>
         <ul class="link-list">
             <li *ngFor="let link of links">
                 <a [routerLink]="link.link"
@@ -20,14 +20,14 @@
         </ul>
     </div>
     <div class="socials">
-        <p class="nav-title">say hello</p>
+        <p class="nav-title">socials</p>
         <div class="links">
             <ul class="link-list hello">
                 <li *ngFor="let social of socials">
-                    <a [routerLink]="social.link"
-                    class="link">
-                        {{ social.label }}
-                    </a>
+                    <button class="link"
+                    (click)="openLink(social)">
+                        {{ social }}
+                    </button>
                 </li>
             </ul>
         </div>

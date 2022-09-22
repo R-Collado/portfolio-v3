@@ -152,7 +152,7 @@
           right: -2rem;
           background-color: var(--clr-primary-200);
           height: 100%;
-          width: 3.5rem;
+          width: 2.5rem;
           z-index: -1;
           opacity: 0;
           transition: opacity 0.25s ease, right 0.25s ease-in-out;
@@ -204,8 +204,9 @@
           justify-content: flex-start;
 
           & .social-icon {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-block: 3rem;
+            font-weight: 900;
           }
         }
 
